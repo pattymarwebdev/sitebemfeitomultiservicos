@@ -407,26 +407,27 @@ h4 {
   .navegacao {
     display: flex;
     justify-content: center;
-    gap: 2rem;
-    margin-top: 1rem;
-    width: 100%; /* Garante que a navegação ocupe toda a largura */
-    justify-content: space-evenly; /* Distribui os itens igualmente */
+    align-items: center;
+    width: 100%;
+    padding: 0 1rem;
+    flex-wrap: wrap;
   }
 
   /* Ajustes para o menu */
   .menu {
     display: flex;
-    flex-direction: column;  /* Coloca os itens do menu em coluna */
-    gap: 1rem;
+    flex-direction:column;  /* Coloca os itens do menu em coluna */
+    gap: 0.1rem;
     justify-content: center;
    width: 100%;
+   
   }
 
   /* Ajustes para os ícones de redes sociais */
   .redes-sociais {
     display: flex;
     justify-content: center;
-    gap: 1rem; /* Ajuste o espaçamento entre os ícones */
+    gap: 2rem; /* Ajuste o espaçamento entre os ícones */
     margin-top: 1rem;
     width: 100%;
     
