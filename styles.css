@@ -431,24 +431,6 @@ h4 {
     max-width: 80%;
     margin-top: 1rem;
   }
-  .secao-empresa {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .imagem-empresa img {
-    max-width: 80%;
-    margin: 0 auto;
-  }
-
-  .conteudo-empresa h2 {
-    font-size: 1.8rem;
-  }
-
-  .conteudo-empresa p {
-    font-size: 1rem;
-  }
-
 
   .secao-servicos .cartao-servico {
     grid-template-columns: 1fr;
