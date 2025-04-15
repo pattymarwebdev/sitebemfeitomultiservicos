@@ -394,39 +394,45 @@ h4 {
   border-radius: 5px;
   text-decoration: none;
 }
-
- /* Ajustes para telas menores */
 @media (max-width: 768px) {
  
   .topo {
-    flex-direction: column;
+    display: flex;
+    flex-direction: column;  /* Coloca o menu e ícones em coluna */
+    align-items: center; /* Centraliza os itens */
     text-align: center;
     padding: 10px 0;
   }
 
   .navegacao {
+    display: flex;
     justify-content: center;
+    gap: 2rem;
     margin-top: 1rem;
+    width: 100%; /* Garante que a navegação ocupe toda a largura */
+    justify-content: space-evenly; /* Distribui os itens igualmente */
   }
 
-
+  /* Ajustes para o menu */
   .menu {
     display: flex;
-    flex-direction: row; 
+    flex-direction: column;  /* Coloca os itens do menu em coluna */
+    gap: 1rem;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin: 0;
+   width: 100%;
   }
 
-.redes-sociais {
-  margin-top: 10px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.redes-sociais a {
-  margin: 0 5px;
-}
+  /* Ajustes para os ícones de redes sociais */
+  .redes-sociais {
+    display: flex;
+    justify-content: center;
+    gap: 1rem; /* Ajuste o espaçamento entre os ícones */
+    margin-top: 1rem;
+    width: 100%;
+    
+  }
+
+  /* Ajustes nas outras seções para telas pequenas */
   .inicio {
     flex-direction: column;
     text-align: center;
@@ -506,6 +512,7 @@ h4 {
     margin-top: 1rem;
   }
 
+  /* Estilo do botão de voltar */
   .btn-voltar {
     position: fixed;
     bottom: 20px;
