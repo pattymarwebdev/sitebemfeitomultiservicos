@@ -1,0 +1,392 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #ffffff;
+  color: #011526;
+  line-height: 1.6;
+}
+
+/* TOPO */
+.topo {
+  background-color: #ffffff;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.logo {
+  color: #011526;
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.logo span {
+  color: #f2a341;
+  display: block;
+}
+
+.logo small {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: normal;
+  color: #000;
+}
+
+.navegacao {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+  flex-grow: 1;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin-right: 40px;
+}
+
+.menu li {
+  display: inline-block;
+}
+
+.menu li a {
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+  display: block;
+  padding: 0.5rem 0;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.menu li a:hover{
+  color: #f2a341;
+  transform: translateY(-2px);
+}
+
+.redes-sociais {
+  display: flex;
+  gap: 0.5rem;
+}
+.redes-sociais a{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.redes-sociais a i {
+  font-size: 1rem;
+  color: #011526;
+  transition: all 0.3s ease;
+}
+
+.redes-sociais a:hover {
+ 
+  
+  transform: scale(1.1);
+}
+
+/* HERO */
+.inicio {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  gap: 2rem;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.conteudo-inicio {
+  flex: 1;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.conteudo-inicio h1 {
+  font-size: 2.5rem;
+  color: #282d30;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.conteudo-inicio p {
+  margin-bottom: 1.5rem;
+  max-width: 500px;
+}
+
+.imagem-inicio img {
+  max-width: 400px;
+  height: auto;
+}
+
+/* BOTOES */
+.botao {
+  display: inline-block;
+  padding: 0.3rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.botao.primario {
+  position: relative;
+  display: inline-block;
+  padding: 0.6rem 2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  background-color: #f2a341;
+  transition: all 0.3s ease;
+}
+
+.botao.primario::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+  background-color: #081c27;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.botao.primario:hover {
+  background-color: #081c27;
+}
+
+.botao.primario:hover::before {
+  opacity: 0.2;
+}
+
+
+/* SEÇÃO SERVIÇOS */
+.secao-servicos {
+  padding: 4rem 2rem;
+  background-color: #e3eef2;
+  text-align: center;
+}
+
+.secao-servicos h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.descricao-secao {
+  margin-bottom: 2rem;
+  color: #444;
+}
+
+.cartao-servico {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.cartao {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.cartao:hover {
+  transform: translateY(-5px);
+  border: 2px dotted #071b29;
+}
+
+/* SEÇÃO SOLUÇÕES */
+.secao-solucoes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  background-color: #ffff;
+  margin-top: 0.5rem;
+  gap: 2rem;
+}
+
+.imagem-solucao img {
+  max-width: 450px;
+  height: auto;
+}
+
+.conteudo-solucao {
+  flex: 1;
+  max-width: 600px;
+  padding: 2rem;
+  text-align: left;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #282d30;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.numeros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.numero {
+  flex: 1;
+  min-width: 120px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.circulo {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #f2a341;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  line-height: 40px;
+  margin: 0 auto 10px;
+}
+
+h4 {
+  font-size: 1.1rem;
+  color: #282d30;
+  margin-bottom: 0.5rem;
+}
+
+.numero p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.linha-separacao {
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+
+/* SOBRE A EMPRESA */
+.secao-empresa {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 2rem;
+  background-color: #ffff;
+}
+
+.conteudo-empresa {
+  flex: 1;
+  max-width: 600px;
+  padding: 2rem;
+  text-align: left;
+}
+
+.imagem-empresa img {
+  max-width: 450px;
+  height: auto;
+}
+
+.secao-cta {
+  text-align: center;
+  background-color: #f2a341;
+  padding: 2rem 1rem;
+  margin-top: 90px;
+}
+
+.secao-cta h2 {
+  color: #011526;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.secao-cta p {
+  color: #071b29;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+.secao-cta .botao.primario{
+  background-color: #e3eef2;
+  color: #071b29;
+  margin-top: 1.5rem;
+}
+
+
+/* RODAPÉ */
+.rodape {
+  background-color: #071b29;
+  color: white;
+  padding: 1.5rem;
+  text-align: center;
+  margin-top: 1rem;
+  padding-bottom: 0.2rem;
+}
+
+.rodape a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin-right: 1rem;
+  margin-top: 0.5rem;
+  padding: 10px 10px;
+}
+.rodape-fim {
+  margin-top: 1rem;
+  margin-top: -50px;
+  
+
+}
+
+.rodape-fim p {
+  font-size: 0.9rem;
+  margin-top: 100px;
+  color: #ccc;
+
+}
+
+.btn-voltar {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #f2a341;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+}

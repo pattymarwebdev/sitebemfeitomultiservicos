@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+#projetos {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+#projetos h1 {
+    font-size: 2.5rem;
+    color: #f2f2f2;
+    margin-bottom: 20px;
+    font-family: 'Roboto Slab', serif;
+}
+
+#projetos p {
+    font-size: 1.2rem;
+    color:#8fb2bf;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.grid-projetos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.projeto {
+    position: relative;
+    height: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.projeto img {
+    width: 100%;
+    height: 200px;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.projeto:hover img {
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.projeto:hover .overlay {
+    opacity: 1;
+}
+
+.nome-projeto {
+    font-size: 1rem;
+    color: #f2a341;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+
+.link-projeto {
+    font-size: 0.9rem; 
+    color: #ffffff; 
+    text-decoration: none;
+    font-weight: normal;
+    transition: color 0.3s ease;
+}
+
+.link-projeto:hover {
+    color: #f2a341; 
+    text-decoration: underline;
+}
+
+.link-projeto:active {
+    color: #f2a341; 
+}
+.voltar-inicio {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    font-size: 1rem;
+    color: #f2f2f2;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.voltar-inicio:hover {
+    color: #bf5630;
+}
