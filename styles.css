@@ -416,8 +416,7 @@ h4 {
   /* Ajustes para o menu */
   .menu {
     display: flex;
-    flex-direction:column;  /* Coloca os itens do menu em coluna */
-    gap: 0.1rem;
+    
     justify-content: center;
    width: 100%;
    
