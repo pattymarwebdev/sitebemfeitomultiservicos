@@ -394,97 +394,28 @@ h4 {
   border-radius: 5px;
   text-decoration: none;
 }
+
 @media (max-width: 768px) {
-  .inicio {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .conteudo-inicio {
-    max-width: 100%;
-    text-align: center;
-  }
-
-  .imagem-inicio img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  .cartao-servico {
-    grid-template-columns: 1fr;
-  }
-
-  .secao-solucoes {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .imagem-solucao img {
-    max-width: 100%;
-  }
-}
-/* Responsividade */
-@media (max-width: 1024px) {
+  /* Ajustes para telas menores */
   .topo {
     flex-direction: column;
+    text-align: center;
     padding: 1rem;
   }
 
   .navegacao {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
   }
 
   .menu {
     flex-direction: column;
     gap: 0.5rem;
-    margin-right: 0;
   }
 
-  .imagem-inicio img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  .conteudo-inicio {
-    text-align: center;
-    max-width: 100%;
-  }
-
-  .secao-servicos .cartao-servico {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-
-  .secao-solucoes {
+  .inicio {
     flex-direction: column;
-    align-items: center;
-  }
-
-  .imagem-solucao img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  .conteudo-solucao {
-    max-width: 100%;
-    padding: 1rem;
-  }
-
-  /* Ajuste dos botões */
-  .botao.primario {
-    width: 100%;
-    padding: 1rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .menu li {
-    font-size: 1rem;
-  }
-
-  .topo {
+    text-align: center;
     padding: 1rem;
   }
 
@@ -492,108 +423,89 @@ h4 {
     font-size: 2rem;
   }
 
+  .conteudo-inicio p {
+    font-size: 1rem;
+  }
+
   .imagem-inicio img {
     max-width: 80%;
     margin-top: 1rem;
   }
 
-  .secao-servicos h2, .secao-solucoes h2 {
-    font-size: 1.5rem;
-  }
-
   .secao-servicos .cartao-servico {
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 1.5rem;
   }
 
-  .rodape .colunas-rodape {
+  .secao-solucoes {
+    flex-direction: column;
     text-align: center;
-  }
-}
-
-@media (max-width: 480px) {
-  .logo {
-    font-size: 1.2rem;
-  }
-
-  .logo small {
-    font-size: 0.6rem;
-  }
-
-  .menu li {
-    font-size: 0.9rem;
-  }
-
-  .secao-servicos h2, .secao-solucoes h2 {
-    font-size: 1.25rem;
-  }
-
-  .conteudo-inicio h1 {
-    font-size: 1.8rem;
-  }
-
-  .secao-servicos .cartao-servico {
-    grid-template-columns: 1fr;
-  }
-
-  .botao.primario {
     padding: 1rem;
   }
 
   .imagem-solucao img {
     max-width: 100%;
-    height: auto;
-  }
-}
-/* Estilos para o menu em dispositivos móveis */
-@media (max-width: 768px) {
-  .menu {
-    display: block;
-    width: 100%;
-    position: relative;
-    padding: 0;
+    margin-top: 1rem;
   }
 
-  /* Ícones de redes sociais desaparecendo ou reposicionados */
-  .icones-redes-sociais {
-    display: none; /* Ou mova os ícones para outra posição se preferir */
-  }
-
-  /* Caso o menu seja uma lista, podemos empilhá-la em vez de exibir horizontalmente */
-  .menu ul {
-    display: block;
-    width: 100%;
+  .conteudo-solucao {
+    padding: 1rem;
     text-align: center;
   }
 
-  .menu ul li {
-    margin-bottom: 10px; /* Espaçamento entre os itens do menu */
+  .numeros {
+    flex-direction: column;
+    gap: 1rem;
   }
 
-  /* Ajustes adicionais para evitar overflow e garantir que o conteúdo do menu se encaixe */
-  .menu-item {
-    width: 100%;
+  .numero {
+    flex: none;
+    margin: 1rem 0;
+  }
+
+  .secao-cta {
+    padding: 2rem;
     text-align: center;
   }
-}/* Menu fixo */
-@media (max-width: 768px) {
-  .menu {
-    position: relative;  /* Tornar o menu não fixo em dispositivos móveis */
-    width: 100%;
+
+  .secao-cta h2 {
+    font-size: 1.8rem;
   }
 
-  /* Ajuste de largura do menu para não ultrapassar a tela */
-  .menu ul {
+  .secao-cta p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .rodape {
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .colunas-rodape {
     display: flex;
-    justify-content: space-between;
-    padding: 0;
-    margin: 0;
-    width: 100%;
+    flex-direction: column;
+    gap: 1rem;
   }
 
-  /* Alinhar os itens do menu no centro em telas pequenas */
-  .menu ul li {
-    text-align: center;
-    flex: 1;
+  .rodape-fim {
+    margin-top: 1rem;
+  }
+
+  .btn-voltar {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 0.5rem 1rem;
+    background-color: #f2a341;
+    color: white;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+
+  .btn-voltar:hover {
+    background-color: #081c27;
   }
 }
