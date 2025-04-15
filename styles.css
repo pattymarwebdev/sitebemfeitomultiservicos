@@ -4,6 +4,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+/* Evitar overflow horizontal */
+body, html {
+  overflow-x: hidden;
+}
 
 body {
   font-family: 'Inter', sans-serif;
@@ -389,4 +393,207 @@ h4 {
   padding: 0.5rem 1rem;
   border-radius: 5px;
   text-decoration: none;
+}
+@media (max-width: 768px) {
+  .inicio {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .conteudo-inicio {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .imagem-inicio img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .cartao-servico {
+    grid-template-columns: 1fr;
+  }
+
+  .secao-solucoes {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .imagem-solucao img {
+    max-width: 100%;
+  }
+}
+/* Responsividade */
+@media (max-width: 1024px) {
+  .topo {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .navegacao {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .menu {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-right: 0;
+  }
+
+  .imagem-inicio img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .conteudo-inicio {
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .secao-servicos .cartao-servico {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .secao-solucoes {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .imagem-solucao img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .conteudo-solucao {
+    max-width: 100%;
+    padding: 1rem;
+  }
+
+  /* Ajuste dos botões */
+  .botao.primario {
+    width: 100%;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu li {
+    font-size: 1rem;
+  }
+
+  .topo {
+    padding: 1rem;
+  }
+
+  .conteudo-inicio h1 {
+    font-size: 2rem;
+  }
+
+  .imagem-inicio img {
+    max-width: 80%;
+    margin-top: 1rem;
+  }
+
+  .secao-servicos h2, .secao-solucoes h2 {
+    font-size: 1.5rem;
+  }
+
+  .secao-servicos .cartao-servico {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .rodape .colunas-rodape {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  .logo small {
+    font-size: 0.6rem;
+  }
+
+  .menu li {
+    font-size: 0.9rem;
+  }
+
+  .secao-servicos h2, .secao-solucoes h2 {
+    font-size: 1.25rem;
+  }
+
+  .conteudo-inicio h1 {
+    font-size: 1.8rem;
+  }
+
+  .secao-servicos .cartao-servico {
+    grid-template-columns: 1fr;
+  }
+
+  .botao.primario {
+    padding: 1rem;
+  }
+
+  .imagem-solucao img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+/* Estilos para o menu em dispositivos móveis */
+@media (max-width: 768px) {
+  .menu {
+    display: block;
+    width: 100%;
+    position: relative;
+    padding: 0;
+  }
+
+  /* Ícones de redes sociais desaparecendo ou reposicionados */
+  .icones-redes-sociais {
+    display: none; /* Ou mova os ícones para outra posição se preferir */
+  }
+
+  /* Caso o menu seja uma lista, podemos empilhá-la em vez de exibir horizontalmente */
+  .menu ul {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .menu ul li {
+    margin-bottom: 10px; /* Espaçamento entre os itens do menu */
+  }
+
+  /* Ajustes adicionais para evitar overflow e garantir que o conteúdo do menu se encaixe */
+  .menu-item {
+    width: 100%;
+    text-align: center;
+  }
+}/* Menu fixo */
+@media (max-width: 768px) {
+  .menu {
+    position: relative;  /* Tornar o menu não fixo em dispositivos móveis */
+    width: 100%;
+  }
+
+  /* Ajuste de largura do menu para não ultrapassar a tela */
+  .menu ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  /* Alinhar os itens do menu no centro em telas pequenas */
+  .menu ul li {
+    text-align: center;
+    flex: 1;
+  }
 }
