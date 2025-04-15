@@ -137,10 +137,15 @@ body {
   margin-bottom: 1.5rem;
   max-width: 500px;
 }
-
+.imagem-inicio {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
 .imagem-inicio img {
   max-width: 400px;
   height: auto;
+  display: block;
 }
 
 /* BOTOES */
